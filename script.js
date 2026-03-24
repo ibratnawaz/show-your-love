@@ -1,8 +1,10 @@
 const startButton = document.getElementById('start_button');
+const nameInput = document.getElementById('fname');
 const gifLanding = document.querySelector('.gif');
 const questionLanding = document.querySelector('.question');
 
 var question = null;
+var questionMain = null;
 var gifMain = null;
 var yesButton = null;
 var noButton = null;
@@ -19,7 +21,7 @@ const inst = [
 ];
 
 startButton.addEventListener('click', () => {
-  input = document.getElementById('fname').value;
+  input = nameInput.value;
   const names = [
     'noor',
     'sabenoor',
@@ -60,6 +62,12 @@ startButton.addEventListener('click', () => {
   }
 });
 
+nameInput.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    startButton.click();
+  }
+});
+
 function yesButtonListener() {
   document.body.innerHTML =
     "<div class='wrapper'><h2 class='question'>Yay! Thank you for loving me ❤️, " +
@@ -80,6 +88,9 @@ function noButtonListener() {
     gifMain.src = 'https://media.giphy.com/media/8OPf6xrtXi3QEcu5h9/giphy.gif';
     questionMain.innerHTML = 'JUST ANSWER IT! DO YOU LOVE ME?!';
   }
+  noButton.style.position = 'fixed';
+  noButton.style.transform = 'none';
+
   const noButtonRect = noButton.getBoundingClientRect();
   const maxX = window.innerWidth - noButtonRect.width;
   const maxY = window.innerHeight - noButtonRect.height;
