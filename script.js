@@ -12,8 +12,8 @@ var input = null;
 var count = 0;
 
 const inst = [
-  'Apka naam bolo… dusroo ka nahi Mrs…',
-  'Tum naam batao...dusroo ka nahi Mrs...',
+  'Apka naam bolo Jaan-e-mun… dusroo ka nahi…',
+  'Tum apna naam batao Mrs...dusroo ka nahi...',
   'Madam ji, guess nahi… sahi wala naam batayein 😄',
   'Kya baat hai, apna naam bhi Google karna padega kya?',
   'Begum sahiba, sharmaiye mat… naam toh aapka hi hai 😏',
